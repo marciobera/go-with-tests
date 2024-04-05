@@ -1,2 +1,5 @@
 # go-with-tests
-learning go with tests
+
+Learning go with tests
+
+https://quii.gitbook.io/learn-go-with-tests
