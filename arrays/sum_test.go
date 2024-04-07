@@ -23,6 +23,12 @@ func ExampleSum() {
 	// Output: 15
 }
 
+func BenchmarkSum(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Sum([]int{1, 2, 3, 4, 5})
+	}
+}
+
 func TestSumAll(t *testing.T) {
 	got := SumAll([]int{1, 2}, []int{0, 9})
 	want := []int{3, 9}
@@ -36,6 +42,12 @@ func ExampleSumAll() {
 	sums := SumAll([]int{1, 2}, []int{0, 9})
 	fmt.Println(sums)
 	// Output:  [3 9]
+}
+
+func BenchmarkSumAll(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		SumAll([]int{1, 2}, []int{0, 9})
+	}
 }
 
 func TestSumAllTails(t *testing.T) {
@@ -64,4 +76,10 @@ func ExampleSumAllTails() {
 	sums := SumAllTails([]int{1, 2, 3}, []int{5, 9})
 	fmt.Println(sums)
 	// Output: [5 9]
+}
+
+func BenchmarkSumAllTails(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		SumAllTails([]int{1, 2, 3}, []int{5, 9})
+	}
 }
