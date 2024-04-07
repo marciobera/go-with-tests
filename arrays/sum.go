@@ -1,6 +1,6 @@
 package main
 
-// Sum
+// Sum returns a sum of all slice items
 func Sum(numbers []int) int {
 	sum := 0
 	for _, number := range numbers {
@@ -9,6 +9,7 @@ func Sum(numbers []int) int {
 	return sum
 }
 
+// SumAll returns the sum of all items for each slice
 func SumAll(numbersToSum ...[]int) []int {
 	var sums []int
 
@@ -18,6 +19,7 @@ func SumAll(numbersToSum ...[]int) []int {
 	return sums
 }
 
+// SumAllTails returns the sum of all items but the first for each slice
 func SumAllTails(numbersToSum ...[]int) []int {
 	var sums []int
 	for _, numbers := range numbersToSum {
